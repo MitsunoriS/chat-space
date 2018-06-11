@@ -2,7 +2,7 @@
 
 ## DB設計
 
-## User テーブル
+## users テーブル
 | Column | Type | Options |
 | ---------- | ------- | ----------- |
 | name | string | index: true, null: false, unique: true |
@@ -19,13 +19,12 @@
 ## group テーブル
 | Column | Type | Options |
 | ---------- | ------- | ----------- |
-| user_id | reference | null: false, foreign_key: true |
-| group_id | reference | null: false, foreign_key: true |
+| name | string | null: false |
 
 ### Association
-- has_many :user, through: members
 - has_many :messages
 - has_many :members
+- has_many :users, through: members
 
 
 
