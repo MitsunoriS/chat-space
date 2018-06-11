@@ -23,7 +23,7 @@
 | group_id | reference | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :user
+- has_many :user, through: members
 - has_many :messages
 - has_many :members
 
