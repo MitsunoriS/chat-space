@@ -10,20 +10,20 @@
 | password | string | null: false |
 
 ### Association
-- has_many :groups, through: members
 - has_many :messages
 - has_many :members
+- has_many :groups, through: members
 
 
 
 ## group テーブル
 | Column | Type | Options |
 | ---------- | ------- | ----------- |
-| user_id | integer | null: false, foreign_key: sure |
-| group_id | integer | |
+| user_id | reference | null: false, foreign_key: true |
+| group_id | reference | null: false, foreign_key: true |
 
 ### Association
-- has_many :user
+- belongs_to :user
 - has_many :messages
 - has_many :members
 
@@ -32,8 +32,8 @@
 ## messages テーブル
 | Column | Type | Options |
 | ---------- | ------- | ----------- |
-| user_id | integer | null :false, foreign_key: true |
-| group_id | integer | null :false, foreign_key: true |
+| user_id | reference | null :false, foreign_key: true |
+| group_id | reference | null :false, foreign_key: true |
 | body | text | |
 | image | string | |
 
@@ -46,8 +46,8 @@
 ## members テーブル
 | Column | Type | Options |
 | ---------- | ------- | ----------- |
-| user_id | integer | null: false, foreign_key: true |
-| group_id | integer | null: false, foreign_key: true |
+| user_id | reference | null: false, foreign_key: true |
+| group_id | reference | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :group
