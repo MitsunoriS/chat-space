@@ -7,7 +7,10 @@
     .sidebar_header{
       height: 120px;
       background: #253141;
-      .name{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .user_name{
         font-size: 16px;
         font-weight: bold;
       }
