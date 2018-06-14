@@ -1,0 +1,37 @@
+.contents{
+  .sidebar{
+    height: 100vh;
+    width: 300px;
+    color: #ffffff;
+    float: left;
+    .sidebar_header{
+      height: 120px;
+      background: #253141;
+      .name{
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+    .sidebar_body{
+      height: calc(100vh - 120px);
+      background: #2f3e51;
+    }
+  }
+  // 右側コンテンツ部分
+  .main{
+    height: 100vh;
+    width: calc(100vw - 300px);
+    color: black;
+    float: right;
+    .main_title{
+      height: 120px;
+      background: white;
+    }
+    .main_chat{
+      height: calc(100vh - 120px - 90px);
+    }
+    .main_typebox{
+      height: 90px;
+    }
+  }
+}
