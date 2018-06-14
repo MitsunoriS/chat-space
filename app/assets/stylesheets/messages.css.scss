@@ -1,39 +1,56 @@
 .contents{
-  .sidebar{
+// 左側コンテンツ部分
+  .left-content{
     height: 100vh;
     width: 300px;
     color: #ffffff;
     float: left;
-    .sidebar_header{
+    .header{
       height: 120px;
       background: #253141;
+      padding: 0 20px 0 20px;
       display: flex;
       justify-content: center;
       align-items: center;
       .user_name{
         font-size: 16px;
         font-weight: bold;
+        width: 220px;
+        float: left;
+      }
+      .icon{
+        float: right;
+        width: 40px;
       }
     }
-    .sidebar_body{
+    .body{
       height: calc(100vh - 120px);
       background: #2f3e51;
+      padding: 0 20px 0 20px;
+      .text-box{
+        padding: 40px 0 20px;
+        .group-name{font-size: 15px;}
+        .chat-member{
+          font-size: 11px;
+          padding-top: 5px;
+        }
+      }
     }
   }
-  // 右側コンテンツ部分
-  .main{
+// 右側コンテンツ部分
+  .right-content{
     height: 100vh;
     width: calc(100vw - 300px);
     color: black;
     float: right;
-    .main_title{
+    .title{
       height: 120px;
       background: white;
     }
-    .main_chat{
+    .chat-list{
       height: calc(100vh - 120px - 90px);
     }
-    .main_typebox{
+    .type-box{
       height: 90px;
     }
   }
