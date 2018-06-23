@@ -3,20 +3,41 @@
     .header
       .user_name 名前
       .icon
-        %i.fa.fa-edit
-        %i.fa.fa-cog
+        .left-icon
+          %a.iro(href= "http://www.google.com")
+            .fa.fa-edit
+        .right-icon
+          %a.iro(href= "http://www.yahoo.com")
+            .fa.fa-cog
     .body
       .text-box
         .group-name チャットグループリスト
         .chat-member チャットメンバー名
   .right-content
-    .title
-      %p.group sampleグループ
-      %h4 グループ参加メンバー名
-    .chat-list
-      %h4 メッセージ内容
-      %h4 メッセージがここに表示されます
-    .type-box
-      %h4 メッセージをここにタイプします
+    .right-upper
+      .group-box
+        .group-name sampleグループ
+        .group-members グループ参加メンバー名
+      .edit-button Edit
+    .right-middle
+      .chat-box
+        .chat-list
+          %ul.message-column
+            %li.chat-name 名前
+            %li.chat-date 2018/06/16
+          .message-box メッセージが表示されます
+    .right-bottom
+      .bottom-box
+        .bottom-message-box
+          .left-box メッセージをここにタイプします
+          /   = form_for @user do |f|
+          /     = f.text_area :text
+          /     = f.submit "Send"
+          .right-box
+            %ul.button-box
+              %li.img-button
+                .fa.fa-image.fa-lg
+              %li.send-button Send
+
 
 
