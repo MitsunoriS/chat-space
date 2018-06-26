@@ -1,11 +1,11 @@
 .contents{
 // 左側コンテンツ部分
-  .left-content{
+  .sidebar{
     height: 100vh;
     width: 300px;
     color: $white-screen;
     float: left;
-    .header{
+    .sidebar-header{
       height: 120px;
       background: $id-screen;
       padding: 0 20px 0 20px;
@@ -35,7 +35,7 @@
         width: 40px;
       }
     }
-    .body{
+    .sidebar-body{
       height: calc(100vh - 120px);
       background: $chat-list-screen;
       padding: 0 20px;
@@ -50,12 +50,12 @@
     }
   }
 // 右側コンテンツ部分
-  .right-content{
+  .main-content{
     height: 100vh;
     width: calc(100vw - 300px);
     float: right;
       // 右コンテンツ上部の描画
-    .right-upper{
+    .main-upper{
       height: 120px;
       background: white;
       border-bottom-color: red;
@@ -87,7 +87,7 @@
       }
     }
     // 右コンテンツ中央（メッセージ部）の描画
-    .right-middle {
+    .main-middle {
       height: calc(100vh - 120px - 90px);
       .chat-box {
         padding: 46px 20px 0 20px;
@@ -116,7 +116,7 @@
       }
     }
         // 右コンテンツ下部の描画
-    .right-bottom {
+    .main-bottom {
       height: 90px;
       .bottom-box {
         background-color: $chat-frame;

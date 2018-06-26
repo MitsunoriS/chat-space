@@ -1,6 +1,6 @@
 .contents
-  .left-content
-    .header
+  .sidebar
+    .sidebar-header
       .user_name 名前
       .icon
         .left-icon
@@ -9,24 +9,24 @@
         .right-icon
           %a.iro(href= "http://www.yahoo.com")
             .fa.fa-cog
-    .body
+    .sidebar-body
       .text-box
         .group-name チャットグループリスト
         .chat-member チャットメンバー名
-  .right-content
-    .right-upper
+  .main-content
+    .main-upper
       .group-box
         .group-name sampleグループ
         .group-members グループ参加メンバー名
       .edit-button Edit
-    .right-middle
+    .main-middle
       .chat-box
         .chat-list
           %ul.message-column
             %li.chat-name 名前
             %li.chat-date 2018/06/16
           .message-box メッセージが表示されます
-    .right-bottom
+    .main-bottom
       .bottom-box
         .bottom-message-box
           .left-box メッセージをここにタイプします
