@@ -3,11 +3,11 @@
   .left-content{
     height: 100vh;
     width: 300px;
-    color: #ffffff;
+    color: $white-screen;
     float: left;
     .header{
       height: 120px;
-      background: #253141;
+      background: $id-screen;
       padding: 0 20px 0 20px;
       display: flex;
       justify-content: center;
@@ -23,13 +23,13 @@
         .left-icon {
           float: left;
           .iro {
-            color: #fff;
+            color: $white-screen;
           }
         }
         .right-icon {
           float: right;
           .iro {
-            color: #fff;
+            color: $white-screen;
           }
         }
         width: 40px;
@@ -37,7 +37,7 @@
     }
     .body{
       height: calc(100vh - 120px);
-      background: #2f3e51;
+      background: $chat-list-screen;
       padding: 0 20px;
       .text-box{
         padding: 40px 0 20px;
@@ -63,20 +63,20 @@
       .group-box {
         float: left;
         .group-name {
-          color: #333333;
+          color: $group-name-color;
           font-size: 20px;
           padding-top: 35px;
         }
         .group-members {
-          color: #999999;
+          color: $message-screen;
           font-size: 12px;
           padding-top: 15px;
         }
       }
       .edit-button {
         font-size: 15px;
-        color:#5BADEA;
-        border: 1px solid #5BADEA;
+        color:$button-color;
+        border: 1px solid $button-color;
         line-height: 40px;
         width: 50px;
         padding: 0 20px;
@@ -91,8 +91,7 @@
       height: calc(100vh - 120px - 90px);
       .chat-box {
         padding: 46px 20px 0 20px;
-        // height: calc(100vh - 120px - 90px);
-        background: #FAFAFA;
+        background: $chat-screen;
         .chat-list{
           padding-bottom: 40px;
           .message-column {
@@ -105,7 +104,7 @@
             }
             .chat-date {
               font-size: 12px;
-              color: #999999;
+              color: $message-screen;
               padding-left: 10px;
             }
           }
@@ -120,7 +119,7 @@
     .right-bottom {
       height: 90px;
       .bottom-box {
-        background-color: #DDDDDD;
+        background-color: $chat-frame;
         padding: 20px 40px;
         // height: 50px;
         .bottom-message-box{
@@ -150,7 +149,7 @@
                 margin-left: 15px;
                 padding: 0 30px;
                 color: white;
-                background-color: #38AEF0;
+                background-color: $button-color;
                 text-align: center;
                 vertical-align: middle;
                 font-size: 16px;
