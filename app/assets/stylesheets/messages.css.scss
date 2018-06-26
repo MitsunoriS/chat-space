@@ -5,44 +5,34 @@
     width: 300px;
     color: $white-screen;
     float: left;
-    .sidebar-header{
+    &Header{
       height: 120px;
       background: $id-screen;
       padding: 0 20px 0 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      .user_name{
+      &__userName{
         font-size: 16px;
         font-weight: bold;
         width: 220px;
         float: left;
       }
-      .icon{
-        color: inherit;
-        .left-icon {
-          float: left;
-          .iro {
-            color: $white-screen;
-          }
-        }
-        .right-icon {
-          float: right;
-          .iro {
-            color: $white-screen;
-          }
-        }
+      &__editButton{
         width: 40px;
+          .fa-white { color: white;}
       }
     }
-    .sidebar-body{
+    &Body{
       height: calc(100vh - 120px);
       background: $chat-list-screen;
       padding: 0 20px;
-      .text-box{
+      &-textBox{
         padding: 40px 0 20px;
-        .group-name{font-size: 15px;}
-        .chat-member{
+        &__groupName{
+          font-size: 15px;
+        }
+        &__chatMember{
           font-size: 11px;
           padding-top: 5px;
         }
@@ -50,30 +40,30 @@
     }
   }
 // 右側コンテンツ部分
-  .main-content{
+  .main{
     height: 100vh;
     width: calc(100vw - 300px);
     float: right;
       // 右コンテンツ上部の描画
-    .main-upper{
+    &Header{
       height: 120px;
       background: white;
       border-bottom-color: red;
       padding: 0 40px;
-      .group-box {
+      &-groupBox{
         float: left;
-        .group-name {
+        &__name{
           color: $group-name-color;
           font-size: 20px;
           padding-top: 35px;
         }
-        .group-members {
+        &__members{
           color: $message-screen;
           font-size: 12px;
           padding-top: 15px;
         }
       }
-      .edit-button {
+      &__editButton {
         font-size: 15px;
         color:$button-color;
         border: 1px solid $button-color;
@@ -87,28 +77,28 @@
       }
     }
     // 右コンテンツ中央（メッセージ部）の描画
-    .main-middle {
+    &Boddy{
       height: calc(100vh - 120px - 90px);
-      .chat-box {
+      &-chatBox{
         padding: 46px 20px 0 20px;
         background: $chat-screen;
-        .chat-list{
+        &-list{
           padding-bottom: 40px;
-          .message-column {
+          &__messageColumn{
             display: flex;
             padding-bottom: 10px;
-            .chat-name {
+            .messageColumn_name{
               font-size: 16px;
               font-weight: bold;
               color:#434A54 ;
             }
-            .chat-date {
+            .messageColumn_date {
               font-size: 12px;
               color: $message-screen;
               padding-left: 10px;
             }
           }
-          .message-box {
+          &messageBox {
             font-size: 14px;
             color: #434A54;
           }
@@ -116,42 +106,40 @@
       }
     }
         // 右コンテンツ下部の描画
-    .main-bottom {
+    &Footer {
       height: 90px;
-      .bottom-box {
+      &-box {
         background-color: $chat-frame;
         padding: 20px 40px;
-        // height: 50px;
-        .bottom-message-box{
+        &-frame{
           height: 50px;
-          width: 100%;
           background-color: white;
-          .left-box {
-            height: 50px;
-            width: 85%;
+          line-height: 50px;
+          &__message{
+            width: calc(100vw - 300px - 285px);
             font-size: 16px;
-            color: #434A54;
+            color: $message-text;
             float: left;
+            padding-left: 10px;
           }
-          .right-box{
-            height:50px;
-            width: 15%;
+          &__buttons{
             float: right;
-            .button-box {
+            .buttons-frame{
               display: flex;
-              height: 50px;
-              .img-buttom {
-                width:20px;
-                position: relative
+              &__imgBtn{
+                width:40px;
+                padding-right: 15px;
+                position: relative;
+                .fa.fa-image{
+                  padding: 0 10px;
+                }
               }
-              .send-button {
-                width: 80px;
-                margin-left: 15px;
+              &__sendBtn{
+                width: 60px;
                 padding: 0 30px;
                 color: white;
                 background-color: $button-color;
                 text-align: center;
-                vertical-align: middle;
                 font-size: 16px;
               }
             }

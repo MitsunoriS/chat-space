@@ -1,40 +1,29 @@
 .contents
   .sidebar
-    .sidebar-header
-      .user_name 名前
-      .icon
-        .left-icon
-          %a.iro(href= "#")
-            .fa.fa-edit
-        .right-icon
-          %a.iro(href= "#")
-            .fa.fa-cog
-    .sidebar-body
-      .text-box
-        .group-name チャットグループリスト
-        .chat-member チャットメンバー名
-  .main-content
-    .main-upper
-      .group-box
-        .group-name sampleグループ
-        .group-members グループ参加メンバー名
-      .edit-button Edit
-    .main-middle
-      .chat-box
-        .chat-list
-          %ul.message-column
-            %li.chat-name 名前
-            %li.chat-date 2018/06/16
-          .message-box メッセージが表示されます
-    .main-bottom
-      .bottom-box
-        .bottom-message-box
-          .left-box メッセージをここにタイプします
-          /   = form_for @user do |f|
-          /     = f.text_area :text
-          /     = f.submit "Send"
-          .right-box
-            %ul.button-box
-              %li.img-button
+    .sidebarHeader
+      .sidebarHeader__userName 名前
+      .sidebarHeader__editButton
+        = link_to '#' do
+          .fa.fa-edit.fa-white
+        = link_to '#' do
+          .fa.fa-cog.fa-white
+    .sidebarBody
+      = render "sidebar-group_name.html.haml"
+  .main
+    .mainHeader
+      .mainHeader-groupBox
+        .mainHeader-groupBox__name sampleグループ
+        .mainHeader-groupBox__members グループ参加メンバー名
+      .mainHeader__editButton Edit
+    .mainBoddy
+      .mainBoddy-chatBox
+        = render "chat-box.html.haml"
+    .mainFooter
+      .mainFooter-box
+        .mainFooter-box-frame
+          .mainFooter-box-frame__message メッセージをここにタイプします
+          .mainFooter-box-frame__buttons
+            .buttons-frame
+              .buttons-frame__imgBtn
                 .fa.fa-image.fa-lg
-              %li.send-button Send
+              .buttons-frame__sendBtn Send
