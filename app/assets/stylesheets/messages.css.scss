@@ -126,7 +126,7 @@
             float: right;
             .buttons-frame{
               display: flex;
-              &__imgbtn{
+              &__image-button{
                 width:40px;
                 padding-right: 15px;
                 position: relative;
@@ -134,7 +134,7 @@
                   padding: 0 10px;
                 }
               }
-              &__sendbtn{
+              &__send-button{
                 width: 60px;
                 padding: 0 30px;
                 color: white;
