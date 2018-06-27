@@ -1,29 +1,30 @@
 .contents
   .sidebar
-    .sidebarHeader
-      .sidebarHeader__userName 名前
-      .sidebarHeader__editButton
+    .sidebar-header
+      .sidebar-header__user-name 名前
+      .sidebar-header__edit-button
         = link_to '#' do
           .fa.fa-edit.fa-white
         = link_to '#' do
           .fa.fa-cog.fa-white
-    .sidebarBody
+    .sidebar-body
       = render "sidebar-name"
   .main
-    .mainHeader
-      .mainHeader-groupBox
-        .mainHeader-groupBox__name sampleグループ
-        .mainHeader-groupBox__members グループ参加メンバー名
-      .mainHeader__editButton Edit
-    .mainBoddy
-      .mainBoddy-chatBox
+    .header
+      .header-groupbox
+        .header-groupbox__name sampleグループ
+        .header-groupbox__members グループ参加メンバー名
+      = link_to '#' do
+        .header__edit-button Edit
+    .body
+      .body-chatbox
         = render "chat-box"
-    .mainFooter
-      .mainFooter-box
-        .mainFooter-box-frame
-          .mainFooter-box-frame__message メッセージをここにタイプします
-          .mainFooter-box-frame__buttons
+    .footer
+      .footer-box
+        .footer-box-frame
+          .footer-box-frame__message メッセージをここにタイプします
+          .footer-box-frame__buttons
             .buttons-frame
-              .buttons-frame__imgBtn
+              .buttons-frame__imgbtn
                 .fa.fa-image.fa-lg
-              .buttons-frame__sendBtn Send
+              .buttons-frame__sendbtn Send
