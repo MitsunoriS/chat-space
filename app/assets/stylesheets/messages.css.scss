@@ -5,7 +5,7 @@
     width: 300px;
     color: $white-screen;
     float: left;
-    &Header{
+    .sidebarHeader{
       height: 120px;
       background: $id-screen;
       padding: 0 20px 0 20px;
@@ -23,7 +23,7 @@
           .fa-white { color: white;}
       }
     }
-    &Body{
+    .sidebarBody{
       height: calc(100vh - 120px);
       background: $chat-list-screen;
       padding: 0 20px;
@@ -45,7 +45,7 @@
     width: calc(100vw - 300px);
     float: right;
       // 右コンテンツ上部の描画
-    &Header{
+    .mainHeader{
       height: 120px;
       background: white;
       border-bottom-color: red;
@@ -77,7 +77,7 @@
       }
     }
     // 右コンテンツ中央（メッセージ部）の描画
-    &Boddy{
+    .mainBoddy{
       height: calc(100vh - 120px - 90px);
       &-chatBox{
         padding: 46px 20px 0 20px;
@@ -106,7 +106,7 @@
       }
     }
         // 右コンテンツ下部の描画
-    &Footer {
+    .mainFooter {
       height: 90px;
       &-box {
         background-color: $chat-frame;
