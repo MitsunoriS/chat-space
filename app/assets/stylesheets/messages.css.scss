@@ -1,38 +1,38 @@
-.contents{
+.contents {
 // 左側コンテンツ部分
-  .sidebar{
+  .sidebar {
     height: 100vh;
     width: 300px;
     color: $white-screen;
     float: left;
-    .sidebar-header{
+    .sidebar-header {
       height: 120px;
       background: $id-screen;
-      padding: 0 20px 0 20px;
+      padding: 0 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      &__user-name{
+      &__user-name {
         font-size: 16px;
         font-weight: bold;
         width: 220px;
         float: left;
       }
-      &__edit-button{
+      &__edit-button {
         width: 40px;
-          .fa-white { color: white;}
+          .fa-white { color: white; }
       }
     }
-    .sidebar-body{
-      height: calc(100vh - 120px);
+    .sidebar-body {
+      height: calc( 100vh - 120px );
       background: $chat-list-screen;
       padding: 0 20px;
-      &-textbox{
+      &-textbox {
         padding: 40px 0 20px;
-        &__group-name{
+        &__group-name {
           font-size: 15px;
         }
-        &__chat-member{
+        &__chat-member {
           font-size: 11px;
           padding-top: 5px;
         }
@@ -40,24 +40,24 @@
     }
   }
 // 右側コンテンツ部分
-  .main{
+  .main {
     height: 100vh;
-    width: calc(100vw - 300px);
+    width: calc( 100vw - 300px );
     float: right;
       // 右コンテンツ上部の描画
-    .header{
+    .header {
       height: 120px;
       background: white;
       border-bottom-color: red;
       padding: 0 40px;
-      &-groupbox{
+      &-groupbox {
         float: left;
-        &__name{
+        &__name {
           color: $group-name-color;
           font-size: 20px;
           padding-top: 35px;
         }
-        &__members{
+        &__members {
           color: $message-screen;
           font-size: 12px;
           padding-top: 15px;
@@ -70,27 +70,26 @@
           line-height: 40px;
           width: 50px;
           padding: 0 20px;
-          margin-top: 28px;
           margin: 28px auto 0px;
           text-align: center;
           float: right;
         }
     }
     // 右コンテンツ中央（メッセージ部）の描画
-    .body{
-      height: calc(100vh - 120px - 90px);
-      &-chatbox{
-        padding: 46px 20px 0 20px;
+    .body {
+      height: calc( 100vh - 120px - 90px );
+      &-chatbox {
+        padding: 46px 20px 0;
         background: $chat-screen;
-        &-list{
+        &-list {
           padding-bottom: 40px;
-          &__message-column{
+          color: $message-text;
+          &__message-column {
             display: flex;
             padding-bottom: 10px;
-            .message-column_name{
+            .message-column_name {
               font-size: 16px;
               font-weight: bold;
-              color:#434A54 ;
             }
             .message-column_date {
               font-size: 12px;
@@ -100,7 +99,6 @@
           }
           &__messagebox {
             font-size: 14px;
-            color: #434A54;
           }
         }
       }
@@ -111,36 +109,35 @@
       &-box {
         background-color: $chat-frame;
         padding: 20px 40px;
-        &-frame{
+        &-frame {
           height: 50px;
           background-color: white;
           line-height: 50px;
-          &__message{
+          font-size: 16px;
+          &__message {
             width: calc(100vw - 300px - 285px);
-            font-size: 16px;
             color: $message-text;
             float: left;
             padding-left: 10px;
           }
-          &__buttons{
+          &__buttons {
             float: right;
-            .buttons-frame{
+            .buttons-frame {
               display: flex;
-              &__image-button{
-                width:40px;
+              &__image-button {
+                width: 40px;
                 padding-right: 15px;
                 position: relative;
-                .fa.fa-image{
+                .fa.fa-image {
                   padding: 0 10px;
                 }
               }
-              &__send-button{
+              &__send-button {
                 width: 60px;
                 padding: 0 30px;
                 color: white;
                 background-color: $button-color;
                 text-align: center;
-                font-size: 16px;
               }
             }
           }
