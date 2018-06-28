@@ -1,0 +1,30 @@
+.contents
+  .side_bar
+    .side_bar__header
+      .side_bar__header__user_name 名前
+      .side_bar__header__edit_button
+        = link_to '#' do
+          = fa_icon "edit", class: "fa-white"
+        = link_to '#' do
+          = fa_icon "cog", class: "fa-white"
+    .side_bar__body
+      = render "side_bar_name"
+  .main
+    .header
+      .header__group_box
+        .header__group_box__name sampleグループ
+        .header__group_box__members グループ参加メンバー名
+      = link_to '#' do
+        .header__edit_button Edit
+    .body
+      .body__chat_box
+        = render "chat_box"
+    .form
+      .form_box
+        .form_box_frame
+          .form_box_frame__message メッセージをここにタイプします
+          .form_box_frame__buttons
+            .buttons_frame
+              .buttons_frame__image_button
+                .fa.fa-image.fa-lg
+              .buttons_frame__send_button Send
