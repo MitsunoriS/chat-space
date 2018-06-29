@@ -116,16 +116,17 @@
           line-height: 50px;
           font-size: 16px;
           &__message {
-            width: calc(100vw - 300px - 285px);
+            width: calc(100vw - 300px - 265px);
             color: $message-text;
             float: left;
             padding-left: 10px;
           }
           &__buttons {
             float: right;
-            .buttons-frame {
+            .buttons_frame {
               display: flex;
-              &__image-button {
+              width: 175px;
+              &__image_button {
                 width: 40px;
                 padding-right: 15px;
                 position: relative;
