@@ -30,12 +30,16 @@
       padding: 0 20px;
       &__textbox {
         padding: 40px 0 20px;
+        text-decoration: none;
         &__group_name {
           font-size: 15px;
+          color: white;
         }
-        &__chat_member {
+        &__chat_message {
           font-size: 11px;
           padding-top: 5px;
+          color: white;
+          text-decoration: none;
         }
       }
     }

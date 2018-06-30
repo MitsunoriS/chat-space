@@ -1,0 +1,17 @@
+/ ユーザー編集ページに遷移するためのパスを追加
+.side_bar
+  .side_bar__header
+    .side_bar__header__user_name
+      = current_user.name
+    .side_bar__header__edit_button
+      = link_to new_group_path do
+        = fa_icon "edit", class: "fa-white"
+      = link_to edit_user_path(current_user) do
+        = fa_icon "cog", class: "fa-white"
+  .side_bar__body
+    - current_user.groups.each do |group|
+      .side_bar__body__textbox
+        = link_to group_messages_path(group) do
+          .side_bar__body__textbox__group_name
+            = group.name
+          .side_bar__body__textbox__chat_message メッセージはまだありません
