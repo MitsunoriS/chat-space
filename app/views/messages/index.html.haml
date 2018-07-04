@@ -13,9 +13,10 @@
     .form
       .form_box
         .form_box_frame
-          .form_box_frame__message メッセージをここにタイプします
-          .form_box_frame__buttons
-            .buttons_frame
-              .buttons_frame__image_button
-                .fa.fa-image.fa-lg
-              .buttons_frame__send_button Send
+          = form_for [@group, @message] do |f|
+            = f.text_field :body, class: 'form_box_frame__message', placeholder: 'type a message'
+            .form_box_frame__buttons
+              = f.label :image, class: 'form__mask__image' do
+                = fa_icon 'picture-o', class: 'icons'
+                = f.file_field :image, class: 'hidden'
+            = f.submit 'Send', class: 'form_box_frame__buttons__send_button'
