@@ -1,0 +1,21 @@
+.contents
+  = render "shared/side_bar"
+  .main
+    .header
+      .header__group_box
+        .header__group_box__name sampleグループ
+        .header__group_box__members グループ参加メンバー名
+      = link_to 'group/#{group_id}/edit' do
+        .header__edit_button Edit
+    .body
+      .body__chat_box
+        = render "shared/chat_box"
+    .form
+      .form_box
+        .form_box_frame
+          .form_box_frame__message メッセージをここにタイプします
+          .form_box_frame__buttons
+            .buttons_frame
+              .buttons_frame__image_button
+                .fa.fa-image.fa-lg
+              .buttons_frame__send_button Send
