@@ -110,42 +110,48 @@
     }
         // 右コンテンツ下部の描画
     .form {
-      height: 90px;
       &_box {
+        height: 50px;
         background-color: $chat-frame;
         padding: 20px 40px;
-        &_frame {
+        &__message {
+          float: left;
+          height: 50px;
+          width: calc(100vw - 300px - 265px);
+          font-size: 16px;
+          color: $message-text;
+          padding-left: 10px;
+          border: 0px;
+        }
+        &__buttons {
+          float: right;
+          width: 175px;
           height: 50px;
           background-color: white;
-          line-height: 50px;
-          font-size: 16px;
-          &__message {
-            width: calc(100vw - 300px - 265px);
-            color: $message-text;
+          .image_button {
+            width: 20px;
+            height: 50px;
+            margin: 0 15px;
+            padding: 0 10px;
             float: left;
-            padding-left: 10px;
-          }
-          &__buttons {
-            float: right;
-            .buttons_frame {
-              display: flex;
-              width: 175px;
-              &__image_button {
-                width: 40px;
-                padding-right: 15px;
-                position: relative;
-                .fa.fa-image {
-                  padding: 0 10px;
-                }
+            .hidden {
+              visibility: hidden;
+              width: 0px;
               }
-              &__send_button {
-                width: 60px;
-                padding: 0 30px;
-                color: white;
-                background-color: $button-color;
-                text-align: center;
-              }
+            .icons {
+              height: 20px;
+              width: 20px;
+              text-align: center;
+              padding: 15px 0;
             }
+          }
+          .send_button {
+            float: right;
+            width: 105px;
+            height: 50px;
+            color: white;
+            background-color: $button-color;
+            text-align: center;
           }
         }
       }
