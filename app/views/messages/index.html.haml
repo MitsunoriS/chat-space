@@ -16,11 +16,10 @@
         = render @messages
     .form
       .form_box
-        .form_box_frame
-          = form_for [@group, @message] do |f|
-            = f.text_field :body, class: 'form_box_frame__message', placeholder: 'type a message'
-            .form_box_frame__buttons
-              = f.label :image, class: 'form__mask__image' do
-                = fa_icon 'picture-o', class: 'icons'
-                = f.file_field :image, class: 'hidden'
-            = f.submit 'Send', class: 'form_box_frame__buttons__send_button'
+        = form_for [@group, @message] do |f|
+          = f.text_field :body, class: 'form_box__message', placeholder: 'type a message'
+          .form_box__buttons
+            = f.label :image, class: 'image_button' do
+              = fa_icon 'picture-o', class: 'icons'
+              = f.file_field :image, class: 'hidden'
+            = f.submit 'Send', class: 'send_button'
