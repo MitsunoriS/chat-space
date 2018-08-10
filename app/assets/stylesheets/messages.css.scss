@@ -82,6 +82,7 @@
     }
     // 右コンテンツ中央（メッセージ部）の描画
     .body {
+      overflow: auto;
       height: calc( 100vh - 120px - 90px );
       &__chat_box {
         padding: 46px 20px 0;
