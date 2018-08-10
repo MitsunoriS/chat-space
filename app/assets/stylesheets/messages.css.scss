@@ -37,6 +37,8 @@
         text-align: center;
         float: right;
       }
+      a { text-decoration: none;}
+      a:visited{ color: $button-color;}
     }
     // 右コンテンツ中央（メッセージ部）の描画
     .body {

@@ -9,8 +9,8 @@
           Member:
           - @group.users.each do |user|
             = user.name
-      = link_to 'group/#{group_id}/edit' do
-        .header__edit_button Edit
+      .header__edit_button
+        = link_to "Edit", edit_group_path(@group)
     .body
       = render @messages
     .form
