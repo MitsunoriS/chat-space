@@ -1,49 +1,7 @@
 .contents {
 // 左側コンテンツ部分
-  .side_bar {
-    height: 100vh;
-    width: 300px;
-    color: $white-screen;
-    float: left;
-    &__header {
-      height: 120px;
-      background: $id-screen;
-      padding: 0 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      &__user_name {
-        font-size: 16px;
-        font-weight: bold;
-        width: 220px;
-        float: left;
-      }
-      &__edit_button {
-        width: 40px;
-        color: white;
-          .fa-white { color: white; }
-      }
-    }
-    &__body {
-      height: calc( 100vh - 120px );
-      background: $chat-list-screen;
-      padding: 0 20px;
-      &__textbox {
-        padding: 40px 0 20px;
-        text-decoration: none;
-        &__group_name {
-          font-size: 15px;
-          color: white;
-        }
-        &__chat_message {
-          font-size: 11px;
-          padding-top: 5px;
-          color: white;
-          text-decoration: none;
-        }
-      }
-    }
-  }
+// modules/side_bar.scssに記述
+
 // 右側コンテンツ部分
   .main {
     height: 100vh;
