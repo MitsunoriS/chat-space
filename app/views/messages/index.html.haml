@@ -12,8 +12,7 @@
       = link_to 'group/#{group_id}/edit' do
         .header__edit_button Edit
     .body
-      .body__chat_box
-        = render @messages
+      = render @messages
     .form
       .form_box
         = form_for [@group, @message] do |f|
