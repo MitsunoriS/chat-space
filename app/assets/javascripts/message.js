@@ -22,7 +22,7 @@ $(function(){
   }
 
   function scroll_to_bottom(){
-    $('.body').animate({scrollTop: $('.body__chat_box')[0].scrollHeight}, 500);
+    $('.body').animate({scrollTop: $('.body')[0].scrollHeight}, 500);
   }
 
   $('#new_message').on('submit', function(e) {
