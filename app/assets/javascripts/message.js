@@ -42,6 +42,7 @@ $(function(){
       var html = buildHTML(data);
       $('.body').append(html)
       $('.new_message')[0].reset()
+      $('.send_button').prop('disabled', false)
       scroll_to_bottom();
     })
     .fail(function() {
