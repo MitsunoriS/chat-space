@@ -9,11 +9,10 @@
           Member:
           - @group.users.each do |user|
             = user.name
-      = link_to 'group/#{group_id}/edit' do
-        .header__edit_button Edit
+      .header__edit_button
+        = link_to "Edit", edit_group_path(@group)
     .body
-      .body__chat_box
-        = render @messages
+      = render @messages
     .form
       .form_box
         = form_for [@group, @message] do |f|
