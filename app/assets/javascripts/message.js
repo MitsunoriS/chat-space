@@ -40,7 +40,7 @@ $(function(){
 
     .done(function(data) {
       var html = buildHTML(data);
-      $('.body__chat_box').append(html)
+      $('.body').append(html)
       $('.new_message')[0].reset()
       scroll_to_bottom();
     })
