@@ -1,5 +1,11 @@
 $(function(){
   function buildHTML(message){
+    if (message.image) {
+      var post_url = `<img class="lower-message__image", src= '${message.image}'>`
+    }
+    else {
+      var post_url = `<div class="lower-message__image">`
+    }
       var html = `<div class="message">
                     <div class="upper-message">
                       <div class="upper-message__user-name">
@@ -10,11 +16,10 @@ $(function(){
                       </div>
                     </div>
                     <div class="lower-meesage">
-                      <p class="lower-message__content">
-                      ${ message.message }
-                      </p>
-                      <div class="lower-message__image">
-                        ${ message.image }
+                      <div class="lower-message__content">
+                        ${ message.message }
+                      </div>
+                      ${ post_url }
                       </div>
                     </div>
                   </div>`
