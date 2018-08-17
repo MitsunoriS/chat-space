@@ -12,7 +12,7 @@ $(document).on('turbolinks:load', function(){
       searchResult.append(html);
     }
 
-    function appendNoUser(user) {
+    function message(user) {
       var html =
       `<div class="chat-group-user clearfix">
          <p>${ user }</p>
@@ -32,7 +32,6 @@ $(document).on('turbolinks:load', function(){
 
     $("#user-search-field").on('keyup', function(){
       var input = $(this).val();
-      // console.log(input);
       $.ajax({
         type: 'GET',
         url: '/users',
@@ -47,7 +46,7 @@ $(document).on('turbolinks:load', function(){
           });
         }
         else {
-          appendNoUser('該当するユーザーがいません');
+          message('該当するユーザーがいません');
         }
       })
       .fail(function(){
