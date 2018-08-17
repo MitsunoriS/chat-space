@@ -31,12 +31,13 @@ $(document).on('turbolinks:load', function(){
     }
 
     $("#user-search-field").on('keyup', function(){
-      var input = $(this).val();
+      // var input = $(this).val();
+      var input = $trim($(this).val());
       $.ajax({
         type: 'GET',
         url: '/users',
         data: { keyword: input },
-        dataType: 'json',
+        dataType: 'json'
       })
       .done(function(users){
         $('#user-search-result').empty();
