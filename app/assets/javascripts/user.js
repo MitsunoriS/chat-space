@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', function(){
   $(function() {
-    var searchResult = $('#user-search-result');
-    var addedUsers = $('#chat-group-users');
+    var $searchResult = $('#user-search-result');
+    var $addedUsers = $('#chat-group-users');
 
     function appendUser(user) {
       var html =
@@ -9,15 +9,15 @@ $(document).on('turbolinks:load', function(){
         <p class="chat-group-user__name">${ user.name }</p>
         <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${ user.id }" data-user-name="${ user.name }">追加</a>
        </div>`
-      searchResult.append(html);
+      $searchResult.append(html);
     }
 
-    function message(user) {
+    function showMessage(message) {
       var html =
       `<div class="chat-group-user clearfix">
-         <p>${ user }</p>
+         <p>${ message }</p>
        </div>`
-       searchResult.append(html);
+       $searchResult.append(html);
     }
 
     function appendToMember(user_name, user_id) {
@@ -27,7 +27,7 @@ $(document).on('turbolinks:load', function(){
          <p class='chat-group-user__name'>${ user_name }</p>
          <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
       </div>`
-      addedUsers.append(html)
+      $addedUsers.append(html)
     }
 
     $("#user-search-field").on('keyup', function(){
@@ -47,7 +47,7 @@ $(document).on('turbolinks:load', function(){
             });
           }
           else {
-            message('該当するユーザーがいません');
+            showMessage('該当するユーザーがいません');
           }
         }
       })
