@@ -31,7 +31,7 @@ $(document).on('turbolinks:load', function(){
     }
 
     $("#user-search-field").on('keyup', function(){
-      var input = $trim($(this).val());
+      var input = $(this).val();
       $.ajax({
         type: 'GET',
         url: '/users',
@@ -40,13 +40,15 @@ $(document).on('turbolinks:load', function(){
       })
       .done(function(users){
         $('#user-search-result').empty();
-        if (users.length !== 0 ) {
-          users.forEach(function(user){
-            appendUser(user);
-          });
-        }
-        else {
-          message('該当するユーザーがいません');
+        if((input != "") && (input != " ")){
+          if (users.length !== 0 ) {
+            users.forEach(function(user){
+              appendUser(user);
+            });
+          }
+          else {
+            message('該当するユーザーがいません');
+          }
         }
       })
       .fail(function(){
