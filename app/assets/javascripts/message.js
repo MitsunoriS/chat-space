@@ -58,7 +58,6 @@ $(function(){
 // メッセージ自動更新機能
  $(window).on('load', function() {
     if(document.URL.match('messages')) {
-      scroll_to_bottom();
       setInterval(update_msg, 5000 );
     }
   });
