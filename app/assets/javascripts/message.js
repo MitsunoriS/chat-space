@@ -6,7 +6,7 @@ $(function(){
     else {
       var post_url = `<div class="lower-message__image">`
     }
-      var html = `<div class="message">
+      var html = `<div class="message" data-message-id="${message.id}">
                     <div class="upper-message">
                       <div class="upper-message__user-name">
                         ${ message.user_name }
@@ -53,5 +53,34 @@ $(function(){
       alert('error');
     });
   });
-});
 
+
+// メッセージ自動更新機能
+ $(window).on('load', function() {
+    if(document.URL.match('messages')) {
+      setInterval(update_msg, 5000 );
+    } else {
+      clearInterval(interval);
+    }
+  });
+
+  function update_msg() {
+    var message_id = $('.message').last().data('messageId');
+      $.ajax({
+        url: location.href,
+        type: "GET",
+        data: { id: message_id },
+        dataType: 'json'
+      })
+      .done(function(data) {
+        data.forEach(function(message){
+          var html = buildHTML(message);
+          $('.body').append(html);
+        });
+      })
+      .fail(function(data) {
+        alert('自動更新に失敗しました')
+      });
+    scroll_to_bottom();
+};
+});
