@@ -59,12 +59,13 @@ $(function(){
  $(window).on('load', function() {
     if(document.URL.match('messages')) {
       setInterval(update_msg, 5000 );
+    } else {
+      clearInterval(interval);
     }
   });
 
   function update_msg() {
     var message_id = $('.message').last().data('messageId');
-    if (message_id) {
       $.ajax({
         url: location.href,
         type: "GET",
@@ -72,20 +73,14 @@ $(function(){
         dataType: 'json'
       })
       .done(function(data) {
-        var html = '';
         data.forEach(function(message){
-          if (message.id > message_id) {
-            html += buildHTML(message);
-          }
+          var html = buildHTML(message);
           $('.body').append(html);
         });
       })
       .fail(function(data) {
         alert('自動更新に失敗しました')
-      })
-    } else {
-      clearInterval(interval);
-    }
+      });
     scroll_to_bottom();
-  }
+};
 });
