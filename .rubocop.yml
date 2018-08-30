@@ -9,6 +9,11 @@ AllCops:
     - node_modules/**/*
     - db/migrate/*
     - vendor/**/*
+    # テストやデプロイで作成したコードなため、変更を無効にする
+    - config/deploy.rb
+    - config/unicorn.rb
+    - spec/rails_helper.rb
+    - test/test_helper.rb
   # Rails向けのRails copsを実行。"rubocop -R"と同じ
   Rails:
     enabled: true
@@ -27,4 +32,11 @@ Metrics/LineLength:
 
 #'frozen_string_literal: true'を無効
 Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# コードの1行に対する文字数が多いエラー検出を無効
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/MethodLength:
   Enabled: false
