@@ -5,7 +5,6 @@ describe MessagesController do
   let(:user) { create(:user) }
 
   describe '#index' do
-
     context 'log in' do
       before do
         login user
@@ -47,7 +46,7 @@ describe MessagesController do
       context 'can save' do
         subject {
           post :create,
-          params: params
+               params: params
         }
 
         it 'count up message' do
@@ -65,7 +64,7 @@ describe MessagesController do
 
         subject {
           post :create,
-          params: invalid_params
+               params: invalid_params
         }
 
         it 'does not count up' do
@@ -80,7 +79,6 @@ describe MessagesController do
     end
 
     context 'not log in' do
-
       it 'redirects to new_user_session_path' do
         post :create, params: params
         expect(response).to redirect_to(new_user_session_path)
